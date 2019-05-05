@@ -10,14 +10,14 @@ Specially useful for exposing a TCP port proxy to an internal service on a gatew
 
 ## Usage
 
-### Simple run:
+#### Simple run:
 ```shell
 # Run with arguments
 docker run -d --name ssh-proxy -p 2222:80 zhangsean/nginx-port-proxy 192.168.0.100:22
 
 docker run -d --name dns-proxy -p 53:80/udp zhangsean/nginx-port-proxy 8.8.8.8:53/udp
 
-# Run with environment variable
+# Run with environment variables
 docker run -d --name myproxy \
  -e LISTEN_PORT=84 \
  -e PROTO=tcp \
@@ -29,7 +29,7 @@ docker run -d --name myproxy \
 
 #### Web example:
 ```shell
-# run a web server
+# Run a web server
 docker run --name web -p 80:80 -d zhangsean/hello-web
 
 # Run a port proxy with link
@@ -41,7 +41,7 @@ docker run --name web-proxy -p 8000:80 -d zhangsean/nginx-port-proxy 172.17.0.2:
 
 #### TCP example:
 ```shell
-# run a mysql server
+# Run a mysql server
 docker run --name mysql -d mysql
 
 # Run a port proxy with link
@@ -50,14 +50,14 @@ docker run --name mysql-proxy -p 3306:80 --link mysql:mysql -d zhangsean/nginx-p
 
 #### UDP example:
 ```shell
-# run a dns server
+# Run a dns server
 docker run --name dns -d jpillora/dnsmasq
 
 # Run a port proxy with link
 docker run -d --name dns-proxy --link dns:dns -p 53:80/udp zhangsean/nginx-port-proxy dns:53/udp
 ```
 
-## Environment variable
+## Environment variables
 Variable name|Default|Description
 ---|---|---
 LISTEN_PORT | 80 | The port which nginx listened on in continaer.
