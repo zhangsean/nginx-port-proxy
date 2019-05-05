@@ -5,7 +5,7 @@ Specially useful for proxying some port from running containers which didn't exp
 
 Specially useful for exposing a TCP port proxy to an internal service on a gateway server too.
 
-[![DockerHub Badge](http://dockeri.co/image/zhangsean/nginx-proxy)](https://hub.docker.com/r/zhangsean/nginx-proxy/)
+[![DockerHub Badge](http://dockeri.co/image/zhangsean/nginx-port-proxy)](https://hub.docker.com/r/zhangsean/nginx-port-proxy/)
 
 
 ## Usage
