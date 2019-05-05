@@ -64,3 +64,8 @@ LISTEN_PORT | 80 | The port which nginx listened on in continaer.
 PROTO | tcp | The proto which nginx listened on and proxy to.
 REMOTE_SERVER | example.com | Remote server name or IP which nginx proxy to.
 REMOTE_PORT | 80 | Remote port which nginx proxy to.
+
+
+## References
+* [Nginx docs: TCP and UDP Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/tcp-udp-load-balancer/)
+* [Nginx docs: Module ngx_stream_proxy_module](https://nginx.org/en/docs/stream/ngx_stream_proxy_module.html)
